@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "empleados"
+  "defaultProject": "empleados",
+  "cli": {
+    "analytics": "8e761994-bfc2-405d-a188-4966b5cf1bbc"
+  }
 }
