@@ -4,19 +4,25 @@
             <div class="card text-center">
                 <div class="card-body">
                     <h3>Agregar Empleado</h3>
-                    <form class="mt-4">
+                    <span *ngIf="submitted && createEmpleado.invalid" class="badge badge-danger">TODOS LOS CAMPOS SON OBLIGATORIOS</span>
+                    <form class="mt-4" [formGroup]="createEmpleado" (ngSubmit)="agregarEmpleado()">
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control form-control-lg" placeholder="Nombre">
+                                <input type="text" class="form-control form-control-lg" formControlName="nombre"
+                                    placeholder="Nombre">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control form-control-lg" placeholder="Apellido">
+                                <input type="text" class="form-control form-control-lg" formControlName="apellido"
+                                    placeholder="Apellido">
                             </div>
                         </div>
-                        <input type="text" class="form-control form-control-lg mt-3" placeholder="Documento">
-                        <input type="text" class="form-control form-control-lg mt-3" placeholder="Salario">
+                        <input type="text" class="form-control form-control-lg mt-3" formControlName="documento"
+                            placeholder="Documento">
+                        <input type="number" class="form-control form-control-lg mt-3" formControlName="salario"
+                            placeholder="Salario">
                         <div class="mt-3">
-                            <button type="text" class="btn btn-secondary btn-lg mr-3" routerLink="/list-empleados">Volver</button>
+                            <button type="text" class="btn btn-secondary btn-lg mr-3"
+                                routerLink="/list-empleados">Volver</button>
                             <button type="submit" class="btn btn-dark btn-lg">Agregar</button>
                         </div>
                     </form>
