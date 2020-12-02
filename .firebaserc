@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "empleados-bccc9": {
+      "hosting": {
+        "empleados": [
+          "empleados-bccc9"
+        ]
+      }
+    }
+  }
+}
